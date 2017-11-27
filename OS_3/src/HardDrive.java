@@ -76,16 +76,16 @@ public class HardDrive {
             }
         }
         int head = 0;
-        for (int i = 0; i < orderTracks.length; i++) {
+        for (int i = 0; i < orderTracks.length&&orderTracks[i]<headAt; i++) {
             head++;
         }
         if (direction) {
-            for (int i = head; i < orderTracks.length; i++) {
+            for (int i = head - 1; i >= 0; i--) {
                 System.out.print(orderTracks[i] + " ");
                 this.distance += Math.abs(this.headAt - orderTracks[i]);
                 this.headAt = orderTracks[i];
             }
-            for (int i = head - 1; i >= 0; i--) {
+            for (int i = head; i < orderTracks.length; i++) {
                 System.out.print(orderTracks[i] + " ");
                 this.distance += Math.abs(this.headAt - orderTracks[i]);
                 this.headAt = orderTracks[i];

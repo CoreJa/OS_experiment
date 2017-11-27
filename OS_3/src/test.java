@@ -20,7 +20,7 @@ public class test {
         System.out.println("请输入磁头起始位置：");
         int headAt = in.nextInt();
         System.out.println("请输入方向（0.左 1.右）：");
-        boolean direction = in.nextInt() != 0;
+        boolean direction = in.nextInt() == 0;
         HardDrive hd = new HardDrive(tracks, headAt, direction, method);
         hd.process();
     }
