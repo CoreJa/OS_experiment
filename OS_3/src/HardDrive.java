@@ -76,7 +76,7 @@ public class HardDrive {
             }
         }
         int head = 0;
-        while (this.headAt > orderTracks[head]) {
+        for (int i = 0; i < orderTracks.length; i++) {
             head++;
         }
         if (direction) {
@@ -104,11 +104,5 @@ public class HardDrive {
         }
         System.out.println();
         System.out.println("总路程=" + this.distance);
-//        System.out.print(chosenOne + " ");
-//        this.distance += Math.abs(this.headAt - chosenOne);
-//        this.headAt = chosenOne;
-//        trackSet.remove(chosenOne);
-//        System.out.println();
-//        System.out.println("总路程=" + this.distance);
     }
 }
